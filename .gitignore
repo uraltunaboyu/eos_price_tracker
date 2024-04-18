@@ -1,0 +1,4 @@
+*.xlsx
+*.lua
+__pycache__/
+!ESO_Crafting_Cost_Calculator.xlsx
