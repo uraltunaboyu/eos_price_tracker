@@ -64,6 +64,9 @@ class PriceParser:
         if name not in self.names:
             print(f"Unable to find {name}")
             return None
+        if self.names[name] not in self.prices:
+            print(f"Unable to find price info for {name}")
+            return None
         if attr not in self.prices[self.names[name]]:
             print(f"Unable to find {attr} in {name}")
             return None
