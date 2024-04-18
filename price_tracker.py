@@ -43,6 +43,10 @@ def update_table(sheet_name: str, table_name: str = None, item_name_col: str = "
             table_dict[COST_COL][1].value = ''
         else:
             table_dict[COST_COL][i].value = float(sale_avg)
+    # cursed manual update for cell D3
+    if table_name == "Styles":
+        iii = float(price_parser.get_attr(table_dict[item_name_col][1].value.lower(), 'SaleAvg'))
+        table_dict[COST_COL][1].value = iii
     update_timestamp(table, sheet)
 
 def update_prices_chart():
